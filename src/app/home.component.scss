@@ -1,0 +1,390 @@
+$myprimary-color:#06a9e0;
+$mysecondary-color:#faa01c;
+$mythird-color:#064e79;
+$mywhite-color:#ffffff;
+$myblack-color:#000000;
+$mylinks-color:#222222;
+/* Webfont: Gotham-Bold */@font-face {
+    font-family: 'GothamBold';
+    src: url('../assets/fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Gotham-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Gotham-Bold.svg#Gotham-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: Gotham-Book */@font-face {
+    font-family: 'GothamBook';
+    src: url('../assets/fonts/Gotham-Book.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Gotham-Book.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Gotham-Book.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Gotham-Book.svg#Gotham-Book') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: Gotham-Light */@font-face {
+    font-family: 'GothamLight';
+    src: url('../assets/fonts/Gotham-Light.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Gotham-Light.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Gotham-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Gotham-Light.svg#Gotham-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: Gotham-Medium */@font-face {
+    font-family: 'GothamMedium';
+    src: url('../assets/fonts/Gotham-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Gotham-Medium.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Gotham-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Gotham-Medium.svg#Gotham-Medium') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+/* Webfont: Gotham-Thin */@font-face {
+    font-family: 'GothamThin';
+    src: url('../assets/fonts/Gotham-Thin.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/Gotham-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/Gotham-Thin.woff') format('woff'), /* Modern Browsers */
+         url('../assets/fonts/Gotham-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/Gotham-Thin.svg#Gotham-Thin') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+	text-rendering: optimizeLegibility;
+}
+.container{
+    margin: 0 auto;
+}
+#page{
+    max-height: 480px;
+}
+.cb-slideshow,
+.cb-slideshow:after { 
+    width: 100%;
+    height: 622px;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url('../assets/img/pattern.png') repeat top left; 
+}
+.cb-slideshow li span { 
+    width: 100%;
+    height: 622px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url('../assets/img/bannerone.jpg') 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url('../assets/img/bannertwo.jpg');
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url('../assets/img/bannerone.jpg');
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url('../assets/img/bannertwo.jpg');
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url('../assets/img/bannerone.jpg');
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url('../assets/img/bannertwo.jpg');
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s; 
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+.bannerlinks{
+    min-height: 100px;
+    width: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: -420px;
+}
+.bannercontone{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.bannercontone h3{
+    color: $mywhite-color;
+    font-family: GothamBold;
+    font-size: 30px;
+}
+.bannercontone p{
+    color: $mywhite-color;
+    font-family: GothamLight;
+    font-size: 16px; 
+}
+.business{
+    background: $myprimary-color;
+    font-size: 16px;
+    font-family: GothamBook;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-right: 40px;
+    width:130px;
+}
+.personal{
+    background: $mysecondary-color;
+    font-size: 16px;
+    font-family: GothamBook;
+    text-transform: uppercase;
+    color: $mywhite-color !important;
+    margin-top: 20px;
+    width:130px;
+}
+.bannerbottom{
+    min-height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: -160px;
+}
+.bannerquicklink{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto
+}
+.homegriditems{
+    border-right: 2px solid $mywhite-color;
+}
+.hideright{
+    border-right: none;
+}
+.homegriditems img{
+    margin-top: 15px;
+}
+.homegriditems h4{
+    color: $mywhite-color;
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: GothamBook;
+}
+.cb-slideshow li{
+    list-style: none !important;
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
+.cont-sec-two{
+    min-height: 250px;
+    background: $mywhite-color;
+    padding: 30px 0px;
+}
+.cont-sec-two h3{
+    font-size: 20px;
+    color: $myblack-color;
+    font-family: GothamMedium;
+}
+.cont-sec-two p{
+    font-size: 16px;
+    color: $myblack-color;
+    font-family: GothamBook;
+}
+.contsecthree{
+    padding: 30px 0px;
+    min-height: 440px;
+    background: url('../assets/img/homesecthreebg.png');
+    background-size: cover;
+}
+.contsecthree p{
+    font-size: 16px;
+    color: $myblack-color;
+    font-family: GothamBook; 
+}
+.contsecthree h3{
+    font-size: 20px;
+    color: $myblack-color;
+    text-align: center;
+    font-family: GothamMedium; 
+}
+.mysolutionsinner img{
+    height: 41px;
+    margin-bottom: 15px;
+}
+.mysolutionsinner{
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
+        min-height: 175px;
+}
+.contsecfour{
+    min-height: 160px;
+    padding: 30px 0px;
+    background-color: rgb(255, 255, 255);
+}
+.contsecfour h3{
+    font-size: 20px;
+    color: $myblack-color;
+    text-align: center;
+    font-family: GothamMedium; 
+}
+#partners .item{
+    padding: 30px 0px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+// media queries
+@media only screen and (max-width:425px){
+    .bannerbottom{
+        margin-top: -175px;
+    }
+    .bannerlinks{
+        min-height: 100px;
+        width: 100%;
+        // background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        margin-top: -440px;
+    }
+    .bannercontone h3{
+        color: $mywhite-color;
+        font-size: 25px;
+    }
+    .bannercontone p{
+        color: $mywhite-color;
+        font-size: 12px; 
+    }
+    .bannerquicklink{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .homegriditems img{
+        margin-top: 15px;
+        height:20px;
+    }
+    .homegriditems h4{
+        color: $mywhite-color;
+        font-size:9px;
+        margin-top: 15px;
+    }
+    .hidemob{
+        border-right: none;
+    }
+    .hideright{
+        border-right:2px solid $mywhite-color;
+    }
+    .showbottom{
+        border-bottom: 1px solid $mywhite-color;
+    }
+}
